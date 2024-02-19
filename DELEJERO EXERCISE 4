@@ -1,0 +1,46 @@
+//covers the input output stream library
+#include <iostream>
+//Usually tells the compiler the standard namespace 
+using namespace std;
+// Defines the cin function when the program execution begins 
+int main() {
+//Declares variables to store the customer's age, total bill amount, service charge, discount rate, discounted amount, and final total.
+    int age;
+    float totalBill, serviceCharge, discountRate, discountedAmount, finalTotal;
+
+    // Declares to asks the user to input their age and stores it in the  age  variable.
+    cout << "Enter customer's age: ";
+    cin >> age;
+
+    // Declares to input the total  total bill amount
+    cout << "Enter total bill amount: ";
+    cin >> totalBill;
+
+    // Declares to calculates the service charge by multiplying the total bill amount by 0.15 (15%).    serviceCharge = 0.15 * totalBill;
+
+    // Declares to determines the discount rate based on the customer's age using if-else statements.
+    if (age >= 10 && age <= 17) {
+        discountRate = 0.15;
+    } else if (age >= 65) {
+        discountRate = 0.30;
+    } else {
+        discountRate = 0.00;
+    }
+
+    // Declares to calculates the discounted amount by subtracting the discount from the total bill amount.
+ discountedAmount = totalBill - (discountRate * totalBill);
+
+    // declares to calculates the final total amount by adding the discounted amount and the service charge.
+    finalTotal = discountedAmount + serviceCharge;
+
+    // Display service charge amount
+    cout << "Service Charge: $" << serviceCharge << endl;
+
+    // Display discounted amount
+    cout << "Discounted Amount: $" << discountedAmount << endl;
+
+    // Display final total amount
+    cout << "Final Total: $" << finalTotal << endl;
+    // declares the end of the  main  function and returns 0, which is a convention to indicate successful program execution
+    return 0;
+}

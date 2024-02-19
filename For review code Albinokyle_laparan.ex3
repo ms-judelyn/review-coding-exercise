@@ -1,0 +1,35 @@
+//covers theinput putput stream library
+#include <iostream>
+
+//usually tells the compiler the standard namespace
+using namespace std;
+
+//defines the ,ain function when the program execution begins.
+int main() {
+	 
+	 // declare three variables of type double
+	double totalbill,ServiceCharge,totalAmount;
+	
+	// promtsthe user to input the total bill amount
+	cout<<"KINDLY INPUT THE TOTAL BILL AMOUNT :";
+	
+	//takes the total bill amount as input fromthe user to input the total bill amount
+	cin>>totalbill;
+	
+	//calculate the service charge as 15% of the total bill 
+	ServiceCharge= totalbill* 0.15;
+	
+	//calculates the total amount to pay by ading the total bill and the service charge
+	totalAmount= totalbill + ServiceCharge;
+	
+	//dispaly the service charge 
+	cout<<"Service Charge:" << ServiceCharge << endl;
+	
+	// display the total amount to pay
+	cout<< "Total amount to pay:" <<totalAmount<<endl;
+	
+	// indicating that the program is executed successfully
+	return 0.0;
+	
+	//end of the main function
+}

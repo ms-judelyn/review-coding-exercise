@@ -1,0 +1,38 @@
+#include <iostream> // Include the input/output stream library
+#include <iomanip> // Include the input/output manipulation library
+
+using namespace std; // Use the standard namespace for input/output operations
+
+int main() { // Start of the main function
+    int age; // Declare a variable to store the user's age
+    double bill_amount, service_charge, discounted_amount, final_amount; // Declare variables for bill amount and calculated values
+    
+    cout << "Enter your age: "; // Prompt the user to enter their age
+    cin >> age; // Read and store the user's age
+    
+    cout << "Enter total bill amount: php"; // Prompt the user to enter the total bill amount
+    cin >> bill_amount; // Read and store the total bill amount
+    
+    // Calculate service charge as 15% of the total bill amount
+    service_charge = 0.15 * bill_amount; 
+    
+    // Calculate discounted amount based on the age of the customer
+    if (age >= 65) { // If the customer is a senior citizen
+        discounted_amount = 0.30 * bill_amount; // Apply a discount rate of 30%
+    } else if (age >= 10 && age <= 17) { // If the customer is a minor
+        discounted_amount = 0.15 * bill_amount; // Apply a discount rate of 15%
+    } else { // For other ages
+        discounted_amount = 0; // No discount applied
+    }
+    
+    // Calculate the final total amount to be paid
+    final_amount = bill_amount + service_charge - discounted_amount; 
+    
+    // Display the calculated values
+    cout << fixed << setprecision(2); // Set the output format to display two decimal places
+    cout << "Service charge: php" << service_charge << endl; // Output the service charge
+    cout << "Discounted amount: php" << discounted_amount << endl; // Output the discounted amount
+    cout << "Final total amount to be paid: php" << final_amount << endl; // Output the final total amount
+    
+    return 0; // Indicate successful completion of the program
+}

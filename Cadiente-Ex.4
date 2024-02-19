@@ -1,0 +1,65 @@
+// includes the input/outputn stream library
+ #include <iostream> 
+ 
+// tells the complier to use standard namespace
+  using namespace std; 
+  
+ // this line defines the main function when the program execution begins
+  int main (){ 
+  
+ // declares three variables of type double
+  double bill, service_charge, discount =0; 
+  
+// declares variable for age
+  int age; 
+  
+// prompts the user to enter age
+ cout<< " Enter your age: "; 
+ 
+// takes the age as input from the user
+  cin>> age; 
+  
+ // prompts the user to enter the total bill amount
+ cout<< "Enter total bill amount: ";
+ 
+//takes the total bill amount as input from the user
+  cin>> bill;
+  
+// calculates the service charge as 15% of the total bill
+ service_charge = bill * 0.15; 
+ 
+ // checks if the costumer a minor
+ if (age >= 10&& age <= 17){
+ 
+ 
+// calculates the minor discount as 15% of total bill
+ discount = bill * 0.15 ; 
+ 
+ //checks if the costumer is senior citizen
+} else if ( age >= 65) {
+	// calculates the senior citizen discount as 30% of the total bill
+	discount = bill * 0.30;	
+//informs the user when no discount
+} else{
+	cout<<"Sorry, no discount applicable for your age. " <<endl;
+	
+}
+
+
+// calculates the total billl after adding service charge and deducting discount
+bill = bill * service_charge - discount;
+
+// displays the service charge
+cout << "Service Charge: " << service_charge << endl; 
+//displays the discount
+
+cout << "Discount: "<< discount<< endl; 
+
+// displays the total amount to be paid
+cout << "Total amount to be paid: " <<bill<<endl; 
+
+// returns 0, indicating that the program has executed successfully
+return 0; 
+
+// end of main function
+}

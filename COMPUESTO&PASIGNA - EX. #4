@@ -1,0 +1,73 @@
+// contains standard input/output library functions which are needed to get data from the screen
+#include <iostream>
+
+// use the standard namespace to use elements without having prefix std:: of cout, cin, endl
+using namespace std;
+
+// the entry point where it marks where program starts and ends
+int  main () {
+	
+// declares a variable named customerAge to hold the value
+	int customerAge;
+
+// displays  "Enter your age: " on the screen and prompts the user to enter the age
+	cout << "Enter your age: ";
+	
+//responsible for reading input from the user storing it in the variable customerAge
+	cin >> customerAge;
+	
+// declares a variable named totalBillAmt to hold the value	
+	double totalBillAmt;
+	
+// prompts the user to enter the total bill  amount
+	cout << "Enter total bill amount: ";
+	
+// responsible for reading input from the user storing it in the variable totalBillAmt
+	cin >> totalBillAmt;
+
+// declares a variable named ServiceChargeRate with a value of 0.15	
+	double ServiceChargeRate = 0.15;
+	
+// declares a variable named ServiceChargeRate with a value of multiplying the totalBillAmt by the ServiceChargeRate
+	double ServiceCharge = totalBillAmt * ServiceChargeRate;
+	
+// displays "The service charge amount is: "  and the calculated ServiceCharge on the screen
+	cout <<  "The service charge amount is: " << ServiceCharge << endl;
+
+//	decalres a variable discountAmt to hold an amount
+double discountAmt;
+
+// ths if statement checks  if the customerAge falls within the range of 10 - 17 (inclusive)
+	if ( customerAge >=10 && customerAge <=17) {
+
+// calculate the discount that will be applied by multiplying the totalBillAmt by 0.15		
+	 discountAmt = totalBillAmt * 0.15;
+		
+// displays "Discounted Amount: " and the calculated discount amount on the screen
+		cout << "Discounted Amount: " << discountAmt << endl;
+		
+// an alternative condition if the customerAge does not falls within 10-17 yrs. old
+	} else if ( customerAge >=65 ) {
+		
+// calculate the discount that will be applied by multiplying the totalBillAmt by 0.3
+		 discountAmt = totalBillAmt * 0.30;
+		
+// displays "Discounted Amount: " and the calculated discount amount on the screen
+		cout << "Discounted Amount: " << discountAmt << endl;
+		
+// another condition if the age does not falls within 10- 17 nor within 65 and above		
+	} else{
+		
+// displays "NO DISCOUNT APPLICABLE " on the screen 
+		cout << "NO DISCOUNT APPLICABLE " << endl;
+	}
+
+// declares a variable totalAmount assigned a value calculated by adding the totalBillAmt and ServiceCharge deducted with the discountAmt		
+	double totalAmount = totalBillAmt + ServiceCharge - discountAmt;
+	
+// displays "The total amount payable is: " on the screen with the calculated total amount
+	cout << "The total amount payable is: " << totalAmount << endl;
+	
+//ends and indicates that the program is executed successfully	
+	return 0;
+}

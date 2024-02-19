@@ -1,0 +1,36 @@
+// contains input and output functions to be able to display and get data from the screen
+#include <iostream>
+
+//contains input and output operations and containers
+using namespace std;
+
+//entry point of the program, where execution begins 
+int main (){
+	
+	//this variable stores the total bill amount
+	double totalBill;
+	
+	//prompts the user to enter the bill amount
+	cout << " Enter the total bill amount: ";
+	
+	//reads input coming from the user and store it in this variable
+	cin >> totalBill;
+	
+	//stores the service charge value (15%)
+	double serviceCharge= 0.15;
+	
+	//stores the calculated amount of service charge amount  
+	double serviceChargeAmt = totalBill*serviceCharge;
+	//displays the result of service charge amount to the screen
+	cout<<" The service charge amount is: "<<serviceChargeAmt<<"\n";
+	
+	//holds the value from the calculation 
+	double totalAmt= totalBill+serviceChargeAmt;
+	
+	//displays the result of the total amount to pay to the screen 
+	cout<<" The total amount to pay is: " <<totalAmt;
+	
+	
+	//ends and indicates the program is executed properly
+	return 0;
+}

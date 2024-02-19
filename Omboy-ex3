@@ -1,0 +1,63 @@
+//Include the content of iostream file 
+
+#include <iostream> 
+
+
+
+//use the standard namespace
+
+using namespace std;
+
+
+
+//define the main function 
+
+int main() {
+
+	
+
+	//declare double variable namely totalAmountToPay, totalBillAmount and serviceCharge
+
+	double totalAmountToPay, totalBillAmount, serviceCharge;
+
+	
+
+	
+
+	//display the message"Input the total bill amount:"to the screen
+
+	cout << "Input the total bill amount:";
+
+	//obtain a number from the user and hold it as the total bill
+
+	cin >> totalBillAmount;
+
+	
+
+	//calculate the service charge as 15% of the total bill amount
+
+	serviceCharge = totalBillAmount * 0.15;
+
+	//calculate the total amount to pay by adding the service charge to the bill amount
+
+	totalAmountToPay = totalBillAmount + serviceCharge ;
+
+	
+
+	//display the service charge amount on the screen
+
+	cout << "Service Charge Amount:" << serviceCharge << endl;
+
+	//display the total amount to pay on the screen
+
+	cout << "Total Amount to Pay:" << totalAmountToPay << endl;
+
+	
+
+	//terminate the main function and return 0 to indicate that the program executed successfully
+
+		return 0;
+
+	
+
+}

@@ -1,0 +1,69 @@
+#include <iostream>
+
+using namespace std;
+
+int main (){
+
+	//declare variables  needed for age.
+
+	int age;
+
+	cout <<"enter age:";
+
+	cin >> age;
+
+	double totalB;
+
+	cout << "enter total bill amount:";
+
+	cin>> totalB;
+
+	// enter their age and the total bill amount .
+
+	double serviceCharge = totalB* .015;
+
+	double discountRate;
+
+	
+
+	if (age>=10 && age<=17){
+
+		discountRate = 0.15;// 15% discount for minors.
+
+		
+
+	} else if (age>=17){
+
+		discountRate = 0.30;// 30% discount for  SN 
+
+		
+
+	} else {
+
+		discountRate = 0.0;// no discount for OTher group.
+
+	}
+
+	//  determine the discount rate based on the users age.
+
+	double discountAmount = totalB*discountRate;
+
+	// calculate the discount amount.
+
+	double finalTotalAmount = totalB+serviceCharge-discountAmount;
+
+	// calculate the final amount to be paid.
+
+	cout <<"service charge:"<<serviceCharge<<endl;
+
+		cout <<"discountedAmount:"<<finalTotalAmount<<endl;
+
+   //display the service charge,discounted amount
+
+   //indicate succesfull amount
+
+
+
+		return 0;
+
+}

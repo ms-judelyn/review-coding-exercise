@@ -1,0 +1,121 @@
+//Include the content of iostream file 
+
+#include <iostream>
+
+
+
+//use the standard namespace
+
+using namespace std;
+
+
+
+//define the main function 
+
+int main() {
+
+	
+
+	//declare an integer variable name age
+
+	int age;
+
+	//declares variable named total bill, service charge, discount, Final Total
+
+	double totalBill, serviceCharge, discount, FTotal;
+
+
+
+   	//display the message "Enter customer's age:" to the screen
+
+	cout << "Enter customer's age:";
+
+	//read age from the user 
+
+	cin >> age;
+
+	
+
+	//display the message "Enter total bill amount:" to the screen
+
+	cout << "Enter total bill amount:";
+
+	//read bill amount from the user
+
+	cin >> totalBill;
+
+	
+
+	//calculate the service charge which is 15% of the total bill
+
+	serviceCharge = totalBill * 0.15;
+
+	
+
+	//check if age is between 10to 17
+
+	if (age>=10 && age<=17){
+
+		
+
+	//calculate 15% discount 
+
+		discount = totalBill * 0.15;
+
+
+
+	}
+
+	//check if age is 65 or above
+
+	else if (age>=65){
+
+		
+
+		//calculate 30% discount 
+
+		discount = totalBill * 0.30;
+
+	}
+
+	
+
+	else { 
+
+	//indicates no discount applied
+
+		discount = 0.0;
+
+	
+
+	}
+
+	//calculate final total amount 
+
+	 	FTotal = totalBill + serviceCharge - discount;
+
+	
+
+	//display service charge 
+
+	cout << "Service charge:" << serviceCharge << endl;
+
+	//display discount
+
+	cout << "Discount:" << discount << endl;
+
+	//display final total amount
+
+	cout << "Final total amount:" << FTotal << endl;
+
+	
+
+	
+
+	//terminate the main function and return 0 to indicate that the program executed successfully
+
+		return 0;
+
+	
+
+}

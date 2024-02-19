@@ -1,0 +1,25 @@
+// this line includes the iostream library
+#include <iostream>
+// this line brings the std namespace into scope 
+using namespace std;
+
+// entry point of the program
+int main (){ 
+// declare the floating variables for bill amount, charges, total amount
+	float totalBillAmount, serviceCharge, totalAmount;
+// prompting the user to enter the total bill amount and storing it in the variable total bill amount
+    cout<< " Enter the total bill amount: ";
+    cin>> totalBillAmount;
+// calculate the service charge as 15% of the total bill amount    
+    serviceCharge = totalBillAmount * 0.15;
+// calculte the total amount to pay    
+    totalAmount = totalBillAmount + serviceCharge;
+// display service charge amount   
+    cout<< " Service charge amount :" << serviceCharge << endl;
+// display the amount to pay    
+    cout<< " Total amount to pay:" << totalAmount << endl;
+// indicates successful program execution    
+    return 0;
+    
+}
+

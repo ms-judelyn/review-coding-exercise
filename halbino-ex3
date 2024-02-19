@@ -1,0 +1,42 @@
+
+
+//Input steam library for user interaction
+#include<iostream> 
+
+//include the content of iostream file
+using namespace std;
+//execution of the program begins
+int main (){
+	//variables for bill calculation
+ double totalBillAmount,serviceCharge,totalAmountToPay;	
+  	   //Input the total bill amount
+	cout <<"Enter the total bill amount:";
+	cin >> totalBillAmount;
+	   //calculate serviceCharge(15 of the total bill amount)
+	serviceCharge = 0.15 *totalBillAmount;
+	  //calculate totalAmountToPAy
+	totalAmountToPay=totalBillAmount + serviceCharge;
+	
+	  //Display serviceChargeAmount
+	cout<< "ServiceChargeAmount: $"<<serviceCharge<<endl;
+	  //Display totalAmountToPay
+	cout<< "totalAmountToPay: $"<<totalAmountToPay<<endl;
+	
+	//indicates successful execute of the program
+	return 0;	
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,33 @@
+#include <iostream>
+
+int main() {
+
+	//store the total bill,serviceCharge,and total amount to pay.
+
+	double totalBill ,serviceChargeP,totalAmount;		
+
+	//enter the toatl bill amount and read the input.
+
+	std::cout<<"Enter the total bill amount in pesos:";
+
+	std::cin>>totalBill;
+
+	//calculate the serviceCharge(15% of the total bill).
+
+	serviceChargeP = 0.15;
+
+	totalAmount = totalBill + serviceChargeP;
+
+	//calculate the service charge and total amount to pay.
+
+	std::cout<<"Service Charge:P"<<serviceChargeP<<std::endl;
+
+	std::cout<<"Total Amount to Pay:P"<<totalAmount<<std::endl;
+
+	//indicate succesful program execution.
+
+	return 0;
+
+
+
+}

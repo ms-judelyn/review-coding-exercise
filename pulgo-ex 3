@@ -1,0 +1,35 @@
+// this line include the output/input stream library.
+#include <iostream>
+
+// this line  kill?d the compilier to use the strandard namespace.
+using namespace std;
+
+// this line defines the main function where the program execution begins.
+int main(){ 
+
+ //this line declares three variables of hype double.
+ double  totalBill, serviceCharge,totalAmount; 
+	
+      // this line promps the user to enter the totalbill amount.
+	cout<< "Enter the total bill amount:"; 
+	
+       //this line takes the total bill amount as input from the user input the total bill amount.
+	cin>>totalBill;
+	
+      // this line calculates the service charge as 15% of the totalBill.
+	 serviceCharge = totalBill * 0.15 ; 
+	
+     //this line calculates the totalAmount to pay by adding the service charge to the totalBill.
+     totalAmount= serviceCharge + totalAmount; 
+	
+    //this line displays the service charge.
+    cout<<"Service charge:"<< serviceCharge<< endl;  
+   
+       //this line displays the totalAmount to pay.
+	cout<< "TOTAL AMOUNT TO BE PAY:"<< totalAmount<<endl;
+	
+	// return 0, indicating that the program has executed successfully
+	return 0;
+            
+      //end of main function
+}

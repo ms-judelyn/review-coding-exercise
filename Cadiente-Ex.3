@@ -1,0 +1,36 @@
+    // includes the input/outputn stream library
+    #include <iostream> 
+ 
+    // tells the complier to use standard namespace
+    using namespace std; 
+ 
+    // defines the main function when the program execution begins
+ 	int main (){ 
+ 	
+    // declares three variables of type double
+ 	double totalBill, serviceCharge, totalAmount; 
+ 	
+ 	// prompts the use to enter the total bill amount
+ 	cout<< "ENTER THE TOTAL AMOUNT ";
+ 	
+   	// takes the totalbill amount as input from the user to input the total amount
+	cin>> totalBill; 
+	
+ 	// calculates the service as 15% of the total bill
+ 	serviceCharge = totalBill * 0.15 ; 
+ 	
+ 	// calculates the total amount to pay by adding the service charge to the totsl bill
+ 	totalAmount = totalBill + serviceCharge ; 
+ 	
+ 	//displays the service charge
+ 	cout<< "Service Charge: "<< serviceCharge << endl; 
+ 	
+ 	//displays the total amount to pay
+ 	cout<< "TOTAL AMOUNT TO PAY: " << totalAmount <<endl; 
+ 	
+ 	//returns 0,indicating that the program has executed successfully
+ 	return 0; 
+ 	
+ 	// end of main function
+    }
+  

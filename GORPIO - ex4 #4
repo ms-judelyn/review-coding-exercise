@@ -1,0 +1,54 @@
+//Include necessary library for input and output operations
+#include <iostream>
+//Use standard namespace
+using namespace std;
+// Define the main function
+int main() {
+	// declare variable for age 
+	int age;
+	//declare variable for total bill
+	float total_bill;
+	//declare variable for service charge
+	float service_charge;
+	//declare variable for discount rate
+	float discount_rate;
+	//declare variable for discount amount
+	float discount_amount;
+	//declare variable for final total 
+	float final_total;
+//prompt the user to input age	
+cout << "Enter your age: ";
+//store user input in age variable
+cin >>	age;
+//prompt the user to input total bill amount
+cout <<"Enter total bill amount";
+//store user input in total bill variable
+cin >> total_bill;
+//calculate service charge (15% of total bill)
+service_charge = 0.15 * total_bill;
+// to check if the costumer is a minor
+if (age >= 10 && age <= 17) {
+	//set discount rate to 15% for minor
+	discount_rate = 0.15;
+// to check if the costumer age is  for senior citizen	
+}  else if (age >= 65) {
+	//set discount rate to 30% for senior citizen
+	discount_rate = 0.30;
+//no discount for other	age group
+ } else if (age < 65 && > 10 && age < 17) {
+ 	//calculate discount amount
+ 	discount_rate = 0;
+ //calculate the final amount	
+discount_amount = discount_rate + total_bill;
+final_total = total_bill + service_charge - discount_amount;
+//display service charge amount
+cout << " service charge: PHP " << service_charge << endl;
+//display discount amount
+cout << " discount amount: PHP " << discount_amount << endl;
+//display final total amount
+cout << "final total amount: PHP " << final_total << endl;
+//terminate the main function
+return 0;
+
+}
+

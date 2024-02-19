@@ -1,0 +1,74 @@
+// contains input and output functions to be able to display and get data from the screen
+#include <iostream>
+
+//contains input and output operations and containers
+using namespace std;
+
+//entry point of the program, where execution begins 
+int main (){
+	
+	//stores the user's age
+	int customerAge;
+	
+	//prompts the user to enter the user's age
+	cout << "Please enter your age: ";
+	
+	//responsible for reading the input from the user and stores it in the variable
+	cin >> customerAge;
+	
+	//stores the total bill amount
+	double totalBillAmt;
+	
+	//prompts the user to enter the user's bill amount
+	cout << " Please enter the amount : " ;
+	
+	//reads the input from the user and stores it in the variable
+cin >> totalBillAmt;
+	
+	//stores the given service charge rate (15%)
+	double serviceChargeRt = 0.15;
+	
+	//stores the calculated value with the variable serviceCharge
+	double serviceCharge = totalBillAmt* serviceChargeRt;
+	
+	//displays the service charge
+	cout <<endl << " SERVICE CHARGE : "<<serviceCharge<< endl;
+	
+	//stores the initial value of the variable
+	double discountAmt;
+	
+	//checks if the customer's age is minor or within the condition'
+	if (customerAge >= 10 && customerAge <=17) {
+			
+		//stores the calculated value of discount amount
+		discountAmt = totalBillAmt* 0.15;
+		
+			//displays the result to the screen
+		cout << " DISCOUNTED AMOUNT: " << discountAmt << endl;
+	
+	//checks if the customer's age is senior or within the age range stated below
+	}else if (customerAge >=65) {
+		
+		//stores the calculated value of the discount amount
+		 discountAmt = totalBillAmt*0.3;
+		
+			//displays the result to the screen
+		cout << " DISCOUNTED AMOUNT: " << discountAmt << endl;
+		
+	//specifies the code to be executed if the condition is false	
+} else {
+	
+	
+	//displays the message to the screen
+	cout<< " NO DISCOUNT APPLIED"<< endl;
+		}
+				
+	//holds the value of the total amount
+	double totalAmt = totalBillAmt + serviceCharge - discountAmt;
+		
+	//display the message to the screen 
+	cout << " TOTAL BILL AMOUNT TO PAY : " << totalAmt ;
+	
+	//ends and indicates that the program is executed successfully
+	return 0;	
+}

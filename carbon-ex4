@@ -1,0 +1,38 @@
+#include <iostream>
+#include <iomanip>
+
+using namespace std;
+
+int main() {
+    int age;
+    double bill_amount, service_charge, discounted_amount, final_amount;
+
+    cout << "Enter your age: ";
+    cin >> age;
+
+    cout << "Enter total bill amount: $";
+    cin >> bill_amount;
+
+    // Calculate service charge
+    service_charge = 0.15 * bill_amount;
+
+    // Calculate discounted amount based on age
+    if (age >= 65) {
+        discounted_amount = 0.30 * bill_amount;
+    } else if (age >= 10 && age <= 17) {
+        discounted_amount = 0.15 * bill_amount;
+    } else {
+        discounted_amount = 0;
+    }
+
+    // Calculate final total amount
+    final_amount = bill_amount + service_charge - discounted_amount;
+
+    // Display results
+    cout << fixed << setprecision(2);
+    cout << "Service charge: $" << service_charge << endl;
+    cout << "Discounted amount: $" << discounted_amount << endl;
+    cout << "Final total amount to be paid: $" << final_amount << endl;
+
+    return 0;
+}

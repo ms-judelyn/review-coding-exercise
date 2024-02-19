@@ -1,0 +1,25 @@
+# include <iostream>
+using namespace std;
+
+int main () {
+	double totalBillAmount, ServiceCharge, totalAmountToPay;
+	//input the total bill amount
+	cout << "Enter the total bill amount:";
+	cin >> totalBillAmount;
+	
+	//calculate service charge by multiplying total bill amount by 0.15
+	ServiceCharge = 0.15 * totalBillAmount;
+	
+	//display the calculate service charge amount to users
+	cout << "Service charge amount :" << ServiceCharge << endl;
+	
+	//calculate total amount to pay by adding the total bill amount and the service charge 
+	totalAmountToPay = totalBillAmount * ServiceCharge;
+	
+	
+   //display the total amount to pay the users
+	cout << "Total amount to pay:" <<totalAmountToPay << endl;
+	
+	return 0;
+	
+}

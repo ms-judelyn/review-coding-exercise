@@ -1,0 +1,27 @@
+//covers the input output stream library
+#include <iostream>
+//Usually tells the compiler the standard namespace 
+using namespace std;
+// Defines the cin function when the program execution begins 
+int main() {
+//declares three variables:  totalBillAmount ,  serviceCharge , and  totalAmountToPay .
+    float totalBillAmount, serviceCharge, totalAmountToPay;
+
+    // prompt asking the user to enter the total bill amount. The user's input is then stored in the  totalBillAmount  variable using the  cin  object.
+    cout << "Enter the total bill amount: ";
+    cin >> totalBillAmount;
+
+    // calculates the service charge by multiplying the total bill amount by 0.15 (which represents 15%).
+    serviceCharge = 0.15 * totalBillAmount;
+
+    // calculates the total amount to pay by adding the total bill amount and the service charge.
+    totalAmountToPay = totalBillAmount + serviceCharge;
+
+    // Display the service charge amount
+    cout << "Service charge: " << serviceCharge << endl;
+
+    // Display the total amount to pay
+    cout << "Total amount to pay: " << totalAmountToPay << endl;
+    // declares the end of the  main  function and returns 0, which is a convention to indicate successful program execution.
+    return 0;
+}

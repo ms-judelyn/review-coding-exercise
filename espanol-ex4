@@ -1,0 +1,36 @@
+//  this line includes the iostream library
+#include <iostream>
+// entry point of the program
+int main () {
+// declaring variables for age, total bill, service charge, discount, discount bill and final total
+	int age;
+	double totalBill, serviceCharge, discount, discountBill, finalTotal;
+// input age and total bill amount	
+	std:: cout<< " Enter your age:";
+	std:: cin>> age;
+	std:: cout<< " Enter the total bill amount: $";
+	std:: cin>> totalBill;
+// calculate the service charge	
+	serviceCharge = 0.15 * totalBill;
+	
+// calculate the discount based on age ( senior citizen)	
+	if (age>=65) {
+		discount = 0.30 * totalBill;
+// apply the 15% discount if the customer is a minor		
+	} else if (age >= 10 && age <= 17) {
+		discount = 0.15 * totalBill;
+// no discount applied		
+	} else {
+		discount = 0;
+	} 
+// calculate the discount bill by subtracting the discount from the total bill
+	discountBill = totalBill - discount;
+// calculate the final total amount	
+	finalTotal = discountBill + serviceCharge;
+// display the service charge amount, discount amount, and final total amount to be paid	
+	std:: cout<< " Service charge amount : $" << serviceCharge << std:: endl;
+	std:: cout<< "Discounted amount : $" << discount << std:: endl;
+	std:: cout<< " Final amount to be paid : $" << finalTotal << std:: endl;
+// indicates successful execution of the program	
+	return 0;
+}

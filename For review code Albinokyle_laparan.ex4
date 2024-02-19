@@ -1,0 +1,68 @@
+//covers the input output stream library.
+#include <iostream>
+
+////usually tells the compiler the standard namespace.
+using namespace std;
+
+//defines the ,ain function when the program execution begins.
+int main(){
+	
+	//declare a double type of variable.
+	double Age;
+	
+	//promtps the user to input the user's age.
+	cout<<"Kindly input your age:";
+	
+	//takes the age as input from the user.
+	cin>> Age;
+	
+	//declare a double type of variable.
+	double Total_Bill;
+	
+	//promptsthe user to input the amount .
+	cout<<"Kindly input the amount:";
+	
+	//takes the total bill from the user.
+	cin>>Total_Bill;
+	
+	//declare a double typeof variable.
+	double Service_Charge= 0.15;
+	
+	//declare a double typeof variable.
+	double Discount= 0.0;
+	
+	//determine if the customer's age is <=17 && >=10.
+ 	if (Age >=10 && Age <=17){
+ 		
+ 		//equivalent discount for ages <=17 && >=10.
+		Discount = 0.15;
+	
+		//determine if the customers age is >=65.
+	} else if(Age >=65){
+		
+		//30% discountfor age 65 and above.
+		Discount = 0.30;
+	}
+	 //calculate the service charge amount after multiplying the total bill and service charge.
+	double Service_Charge_Amount = Total_Bill * Service_Charge;
+	
+	//display the service charge
+	cout<<endl<<"Service Charge:" << Service_Charge_Amount <<endl;
+	
+	//calculate the discount amount by multiplying the total bill and discount.
+	double DiscountAmount = Total_Bill * Discount;
+	
+	//display the discount.
+	cout<< "Discount:"<<DiscountAmount <<endl;
+	
+	//Calculate the total amount by adding the total bill and service charge amount and subtracting the discount amount after adding.
+	double Total_Amount = Total_Bill +Service_Charge_Amount - DiscountAmount;
+	
+	//display the final total amount.
+	cout<<"Final:"<<Total_Amount<<endl;
+	
+	//indicating that the program has executed successfully.
+	return 0;
+	
+// end of the main function.
+}

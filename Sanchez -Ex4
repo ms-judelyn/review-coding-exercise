@@ -1,0 +1,83 @@
+include <iostream>
+
+using namespace  std;
+
+
+
+int main (){
+
+	int age;
+
+	double totalBill, serviceCharge, DiscountRate, DiscountAmount, finaltotal;
+
+	//Get costumer ' s age
+
+	cout << " Enter the customer 's age:";
+
+	cin>> age;
+
+	
+
+	//Get total bill amount 
+
+	cout << " Enter total bill amount :";
+
+	cin >> totalBill;
+
+	
+
+	//Calculate service charge (15% of total bill)
+
+	serviceCharge = 0.15 * totalBill;
+
+	
+
+	//Calculate discount rate based on age
+
+	if ( age >= 10 && age <=17){
+
+		DiscountRate = 0.00;
+
+	}else if( age>=65){ DiscountRate= 0.30;
+
+}else {
+
+	DiscountRate= 0.00;
+
+}
+
+     //Calculate discounted amount (bill amount - discount)
+
+     DiscountAmount = totalBill - ( DiscountRate * totalBill);
+
+     
+
+     //Calculate final amount (discount amount + service charge)
+
+     finaltotal = DiscountAmount + serviceCharge;
+
+     
+
+     //display discounted amount
+
+     cout<< "Service Charge: $ "<<serviceCharge<<endl;
+
+     
+
+     //display discounted amount
+
+     cout<< "Discount Amount: $"<<DiscountAmount<<endl;
+
+     
+
+     //display final total amount
+
+     cout << "Final Total:$"<<finaltotal<<endl;
+
+     
+
+     return 0;
+
+     
+
+}

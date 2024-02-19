@@ -1,0 +1,55 @@
+//Include necessary library for input and output operations
+
+#include <iostream>
+
+//Use standard namespace
+
+using namespace std;
+
+// Define the main function
+
+int main() {
+
+	//Declare the variables to store the total bill amount
+
+	float totalBillAmount;
+
+	//Declare the variable to store the service charge amount
+
+	float serviceCharge;
+
+	//Declare the variable to store the total amount to pay
+
+	float totalAmountToPay;
+
+	//Prompt the user to enter the total bill amount 
+
+cout << "enter the totalBillAmount: ";
+
+//read the input from the user and store it in the total bill variable 
+
+cin >> totalBillAmount;
+
+//calculate the service charge
+
+serviceCharge = 0.15 * totalBillAmount;
+
+//calculate the total amount to pay by adding the service charge to the bill amount
+
+totalAmountToPay = totalBillAmount + serviceCharge;
+
+//display the service charge amount
+
+cout << "servicecharge: " << serviceCharge << endl;
+
+//display the total amount to pay
+
+cout << "total amount to pay: " << totalAmountToPay << endl;
+
+//terminate the main function
+
+return 0;
+
+
+
+}

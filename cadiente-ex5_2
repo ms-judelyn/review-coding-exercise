@@ -1,0 +1,24 @@
+// Include the necessary library for input/output operations
+#include <iostream>
+
+// Use the standard namespace to avoid explicitly specifying it
+using namespace std;
+
+// The main function where the program execution starts
+int main() {
+    // Print the message
+    cout << "Numbers from 1 to 10 in descending order:" << endl;
+
+    // Initialize the variable 'number' to 10
+    int number = 10;
+
+    // Print the current value of 'number' in descending order
+    while (number >= 1) {
+        cout << number << endl;
+        number--; // Decrement 'number' by 1
+    }
+
+    // Indicate successful program execution
+    return 0;
+ // End of int main()
+}
